@@ -30,7 +30,7 @@ async function main() {
 				],
 			})
 		]
-	})
+	});
 
 	await build.watch();
 	const server = await build.serve({
