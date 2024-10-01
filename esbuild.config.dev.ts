@@ -15,24 +15,9 @@ async function main() {
 		metafile: true,
 		outdir: 'out',
 		write: true,
-		tsconfig: "tsconfig.json",
-		// sourcemap: "inline",
-		logLevel: "debug",
+		tsconfig: "tsconfig.dev.json",
+		logLevel: "info",
 		plugins: [
-			// {
-			// 	name: "rebuild-notify",
-			// 	setup(build) {
-			// 		let
-			// 			time= 0;
-			//
-			// 		build.onStart(() => {
-			// 			time = Date.now();
-			// 		});
-			// 		build.onEnd(() => {
-			// 			console.log('build finished in', Date.now() - time, 'ms')
-			// 		});
-			// 	},
-			// },
 			htmlPlugin({
 				files: [
 					{
@@ -40,12 +25,12 @@ async function main() {
 							"src/index.ts"
 						],
 						filename: "index.html",
-						htmlTemplate: getHtmlTemplate("assets/templates/dev.html")
+						htmlTemplate: getHtmlTemplate("assets/templates/index.html")
 					},
 				],
 			})
 		]
-	})
+	});
 
 	await build.watch();
 	const server = await build.serve({

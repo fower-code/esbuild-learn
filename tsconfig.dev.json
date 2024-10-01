@@ -1,0 +1,38 @@
+{
+   "compilerOptions": {
+      "target": "ESNext",
+      "lib": [
+         "dom",
+         "esnext"
+      ],
+      "skipLibCheck": true,
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": false,
+      "noEmit": true,
+      "declaration": true,
+      "declarationDir": "build",
+      "rootDir": ".",
+      "baseUrl": "./",
+      "paths": {
+         "~core/*": [
+            "src/core/*"
+         ],
+         "~assets/*": [
+            "assets/*"
+         ]
+      }
+   },
+   "include": [
+      "src/**/*.ts",
+      "index.d.ts"
+   ],
+   "exclude": [
+      "node_modules"
+   ]
+}

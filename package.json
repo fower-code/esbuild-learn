@@ -1,19 +1,19 @@
 {
-  "name": "hello",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "packageManager": "yarn@4.5.0",
-  "scripts": {
-    "build": "dotenv -e .env ts-node esbuild.config.ts",
-    "serve": "esbuild src/index.js --outdir=out/js --bundle --servedir=out --watch"
-  },
-  "devDependencies": {
-    "@craftamap/esbuild-plugin-html": "^0.8.0",
-    "@types/node": "^22.7.4",
-    "dotenv-cli": "^7.4.2",
-    "esbuild": "^0.24.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.6.2"
-  }
+   "name": "hello",
+   "version": "1.0.0",
+   "main": "index.js",
+   "license": "MIT",
+   "packageManager": "yarn@4.5.0",
+   "scripts": {
+      "serve": "dotenv -e .env ts-node esbuild.config.dev.ts",
+      "build": "dotenv -e .env ts-node esbuild.config.prod.ts"
+   },
+   "devDependencies": {
+      "@craftamap/esbuild-plugin-html": "^0.8.0",
+      "@types/node": "^22.7.4",
+      "dotenv-cli": "^7.4.2",
+      "esbuild": "^0.24.0",
+      "ts-node": "^10.9.2",
+      "typescript": "^5.6.2"
+   }
 }
