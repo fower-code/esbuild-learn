@@ -1,0 +1,37 @@
+{
+   "compilerOptions": {
+      "target": "ESNext",
+      "lib": [
+         "esnext"
+      ],
+      "skipLibCheck": true,
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "module": "CommonJS",
+      "moduleResolution": "NodeNext",
+      "resolveJsonModule": true,
+      "isolatedModules": false,
+      "noEmit": true,
+      "declaration": true,
+      "declarationDir": "build",
+      "rootDir": ".",
+      "baseUrl": "./",
+      "paths": {
+         "~core/*": [
+            "src/core/*"
+         ],
+         "~assets/*": [
+            "assets/*"
+         ]
+      }
+   },
+   "include": [
+      "rspack.config.ts",
+      "rollup.config.ts"
+   ],
+   "exclude": [
+      "node_modules"
+   ]
+}
