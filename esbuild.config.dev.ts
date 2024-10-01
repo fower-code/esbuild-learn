@@ -15,7 +15,7 @@ async function main() {
 		metafile: true,
 		outdir: 'out',
 		write: true,
-		tsconfig: "tsconfig.json",
+		tsconfig: "tsconfig.dev.json",
 		logLevel: "debug",
 		plugins: [
 			htmlPlugin({
